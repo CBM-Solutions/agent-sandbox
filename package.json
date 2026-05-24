@@ -1,0 +1,11 @@
+{
+  "name": "agent-sandbox",
+  "version": "0.1.0",
+  "description": "Sandbox per testare gli agenti Claude Code attivati via etichette agent:*",
+  "main": "src/greeter.js",
+  "scripts": {
+    "test": "node --test"
+  },
+  "license": "UNLICENSED",
+  "private": true
+}
