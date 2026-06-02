@@ -18,8 +18,10 @@ jobs:
       issues: write
       id-token: write
       actions: read
-    uses: CBM-Solutions/.github/.github/workflows/agent-runner.yml@5fafe8aa16a09d149a7f3cd53221d58bee7f4ca1
-    secrets: inherit
+    uses: CBM-Solutions/.github/.github/workflows/agent-runner.yml@40880453a64d22c662f8b8f0d4138a15f619d594
+    secrets:
+      CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+      MASTER_BOARD_TOKEN: ${{ secrets.MASTER_BOARD_TOKEN }}
     with:
       model: claude-haiku-4-5
       fetch_depth: 0
