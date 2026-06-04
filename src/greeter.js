@@ -6,7 +6,7 @@ function greet(name) {
   if (!name) {
     return "Hello, stranger!";
   }
-  return "HELLO, " + name + "!";
+  return "Hello, " + name + "!";
 }
 
 module.exports = { greet };
