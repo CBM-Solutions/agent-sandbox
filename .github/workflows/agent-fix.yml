@@ -16,7 +16,7 @@ jobs:
       issues: write
       id-token: write
       actions: read
-    uses: CBM-Solutions/.github/.github/workflows/agent-runner.yml@006b58184c0dca8551231447f347aff740edc0a0
+    uses: CBM-Solutions/.github/.github/workflows/agent-runner.yml@34818b94172ff8d4006af4a0deab64bf85fc0e98
     secrets:
       CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
       MASTER_BOARD_TOKEN: ${{ secrets.MASTER_BOARD_TOKEN }}
@@ -24,7 +24,7 @@ jobs:
       is_pr_creator: true
       branch_prefix: fix
       use_skills: true
-      chain_review: true       # 8D: sul sandbox la review parte in automatico dopo la PR (demo del chaining)
+      # chain_review: true   # 8D pronto: attivazione bloccata finché MASTER_BOARD_TOKEN non ha scope repo (issues:write) — vedi G2
       allowed_tools: "Edit,Write,Read,MultiEdit,Glob,Grep,Bash(gh issue comment:*),Bash(gh pr create:*),Bash(gh pr comment:*),Bash(gh pr view:*),Bash(gh issue view:*),Bash(git:*)"
       prompt: |
         /agent-fix
