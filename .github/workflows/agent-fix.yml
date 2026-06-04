@@ -16,7 +16,7 @@ jobs:
       issues: write
       id-token: write
       actions: read
-    uses: CBM-Solutions/.github/.github/workflows/agent-runner.yml@76ed9eaa7d8e7c8df1dfb76ddd29bf80c8c7359b
+    uses: CBM-Solutions/.github/.github/workflows/agent-runner.yml@48f11be2fb83270d811400f4bfb5293888b9b2dc
     secrets:
       CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
       MASTER_BOARD_TOKEN: ${{ secrets.MASTER_BOARD_TOKEN }}
@@ -24,6 +24,7 @@ jobs:
       is_pr_creator: true
       branch_prefix: fix
       use_skills: true
+      chain_review: true       # 8D: sul sandbox la review parte in automatico dopo la PR (demo del chaining)
       allowed_tools: "Edit,Write,Read,MultiEdit,Glob,Grep,Bash(gh issue comment:*),Bash(gh pr create:*),Bash(gh pr comment:*),Bash(gh pr view:*),Bash(gh issue view:*),Bash(git:*)"
       prompt: |
         /agent-fix
