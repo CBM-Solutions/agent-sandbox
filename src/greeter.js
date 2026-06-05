@@ -9,4 +9,14 @@ function greet(name) {
   return "HELLO, " + name + "!";
 }
 
-module.exports = { greet };
+const GREETINGS = {
+  it: "Ciao, ",
+  en: "Hello, ",
+};
+
+function formatGreeting(name, locale) {
+  const prefix = GREETINGS[locale] || GREETINGS.en;
+  return prefix + name + "!";
+}
+
+module.exports = { greet, formatGreeting };
