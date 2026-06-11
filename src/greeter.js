@@ -2,11 +2,15 @@
 // Contiene un bug volontario (saluto in maiuscolo invece che capitalize)
 // e nessun test, così gli agenti hanno materiale su cui operare.
 
+function buildGreeting(salutation, name) {
+  return `${salutation}, ${name}!`;
+}
+
 function greet(name) {
   if (!name) {
-    return "Hello, stranger!";
+    return buildGreeting("Hello", "stranger");
   }
-  return "HELLO, " + name + "!";
+  return buildGreeting("HELLO", name);
 }
 
 const GREETINGS = {
